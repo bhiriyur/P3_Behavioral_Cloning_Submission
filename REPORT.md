@@ -172,20 +172,20 @@ Here are the same images as before after the above crop/reshape operation:
 [image4]: ./images/figure_4.png "Balanced histogram"
 [image5]: ./images/figure_5.png "Balanced histogram for turns"
 
-Here's a histogram of the steering angles from the original dataset"
+Here's a histogram of the steering angles from the original dataset (data_mode=0)"
 
 <center><img src="./images/figure_3.png" alt="Original Dataset" style="width: 400px;"/></center>
 
 It must be noted that it is heavily dominated by straight images. I originally trained with this
 complete dataset "as-is" and the car wouldn't properly take turns. So I pruned the dataset to subselect
 a balanced dataset with all bins (steering angle range 0.1) represented proportionally. Following is the resulting
-histogram.
+histogram (data_mode=1, default).
 
 <center><img src="./images/figure_4.png" alt="Proportional Dataset" style="width: 400px;"/></center>
 
 When I trained on the above dataset (transfer learning from previous learned models), the performance was better
 but it was still failing at sharp turns. So I did a further pruning step and retrained with the following distribution
- of steering angles represented:
+ of steering angles represented (data_mode=2):
 
 <center><img src="./images/figure_5.png" alt="Sharp turns Dataset" style="width: 400px;"/></center>
 
