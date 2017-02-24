@@ -7,7 +7,7 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
-##Files submitted:
+## Files submitted:
 - model.py : The network model and trainer
 - drive.py : The driver (provided by Udacity, modified throttle and image transformation)
 - model.h5 : symbolic link to model4.h5 ("transfer learning" from earlier versions of models)
